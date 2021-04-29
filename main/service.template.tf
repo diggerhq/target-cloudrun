@@ -16,3 +16,12 @@ resource "google_cloud_run_service" "{{service_name}}" {
     latest_revision = true
   }
 }
+
+output "{{service_name}}_docker_registry" {
+  value = ""
+}
+
+output "{{service_name}}_lb_dns" {
+  value = google_cloud_run_service.{{service_name}}.url
+}
+
