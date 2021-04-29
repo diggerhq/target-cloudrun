@@ -22,6 +22,6 @@ output "{{service_name}}_docker_registry" {
 }
 
 output "{{service_name}}_lb_dns" {
-  value = google_cloud_run_service.{{service_name}}.status.url
+  value = google_cloud_run_service.{{service_name}}.self_link
 }
 
